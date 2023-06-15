@@ -7,7 +7,7 @@ The project was for a company in Portland called Theatre Vertigo. It involved cr
 
 This team project was organized into a two-week sprint and was managed with Agile and Scrum methodologies. Organization included an inception planning meeting, daily stand-ups, weekly sprint reviews, and finished with a code retrospective. We used Azure DevOps, and employed boards and user stories to achieve a well-ordered level of Project Management.
 
-The majority of my work for this project revolved around creating a Blog area for the website, with user and admin capabilities. I was assigned some of the harder stories for this project and am very proud of what I was able to learn and accomplish.
+The majority of my work for this project revolved around creating a Blog area for the website, with user and admin capabilities. I am very proud of what I was able to learn and accomplish during this 2 week sprint.
 
 <br />
 <hr>
