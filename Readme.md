@@ -5,7 +5,7 @@
 I participated in a Live Project with a team of peers for the final two weeks of my C# and .NET course at The Tech Academy.
 The project was for a company in Portland called Theatre Vertigo. It involved creating and building an interactive website for managing and productions using a Code-first approach with Entity Framework and .NET MVC.
 
-This team project was organized into a two-week sprint, and was managed with Agile and Scrum methodologies. Organization included an inception planning meeting, daily stand-ups, weekly sprint reviews, and finished with a code retrospective. We used Azure DevOps, and employed boards and user stories to achieve a well-ordered level of Project Management.
+This team project was organized into a two-week sprint and was managed with Agile and Scrum methodologies. Organization included an inception planning meeting, daily stand-ups, weekly sprint reviews, and finished with a code retrospective. We used Azure DevOps, and employed boards and user stories to achieve a well-ordered level of Project Management.
 
 The majority of my work for this project revolved around creating a Blog area for the website, with user and admin capabilities. I was assigned some of the harder stories for this project and am very proud of what I was able to learn and accomplish.
 
@@ -36,7 +36,7 @@ Full Stack Stories
 My first assignment was to use JavaScript/jQuery and bootstrap to count the number developers by name that have worked on this project and display that number next to the title heading.
 
 After:
-![After](/images/)
+![After](/images/Story1_counter.png)
 
 ```c#
 /* SIGN-IN PAGE */
@@ -57,9 +57,9 @@ $(document).ready(function () {
 Back to: [Assignments](#my-assignments)
 
 ### 2. Create Comment Model and CRUD for Blog Area
-Next, I was tasked with creating a model for the Blog and creating the database table for it through Entity Framework. This model represented a user's comment on a blog post. It involved creating the class and associated properties to match the database schema, utilizing a context file to create the table, and creating a new controller with scaffolding for CRUD pages to manage the table. By referencing a UML class diagram, I was able to create a Comment constructor with the current date/time, the comment author, their message, and likes and dislikes for the comment. After I created the model I scaffolded the CRUD pages using Visual Studio and EntityFramework to create the Index, Edit, Create, Details, and Delete pages for the admins and users.
+Next, I was tasked with creating a model for the Blog and creating the database table for it through Entity Framework. This model represented a user's comment on a blog post. It involved creating a class and associated properties to match the dB schema, context file implementation for table creation, and creating a new controller with scaffolding for CRUD pages for table management. By referencing a UML class diagram, I was able to create a Comment constructor with the current date/time, the comment author, their message, and likes and dislikes for the comment. After I created the model I scaffolded the CRUD pages using Visual Studio and EntityFramework to create the Index, Edit, Create, Details, and Delete pages for the admins and users.
 
-![UML Diagram](/images/)
+![UML Diagram](/images/Story2_UML-class-diagram.png)
 
 Comment Model:
 ```c#
@@ -211,14 +211,13 @@ namespace TheatreCMS3.Areas.Blog.Controllers
 }
 ```
 
-![Scaffolding](/images/Scaffolding.png)
+![Scaffolding](/images/Story2_Scaffolding.png)
 
 Back to: [Assignments](#my-assignments)
 
 ### 3. Create a Partial View for Displaying Comments
-Following creation of the comment model and CRUD pages, I was assigned to create a partial view for displaying comments accross other pages so that they weren't only regulated to being displayed on the Comments Index page. I did this by replacing the table on the comments index page with a method that calls the _Comments partial view.
+Following creation of the comment model and CRUD pages, I was assigned to create a partial view for displaying comments accross other pages so that they weren't only regulated to being displayed on the Comments Index page. I did this by replacing the table on the comments Index page with a method that calls the Comments.cshtml partial view.
 
-Before:
 ```c#
 //Index.cshtml
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
@@ -238,7 +237,7 @@ Before:
 
     @Html.Partial("~/Areas/Blog/Views/Comments/_Comments.cshtml", Model*@)
 
-
+Before:
 //_Comments.cshtml
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
 
@@ -260,7 +259,6 @@ Before:
         </th>
         <th></th>
     </tr>
-
     @foreach (var item in Model)
     {
         <tr>
@@ -332,67 +330,7 @@ After:
 Back to: [Assignments](#my-assignments)
 
 ### 4. Style the Comments Section
-The next assignment was to make the comment section look more like a comment section you would find on any popular website. This invovled a redesign of how the author, datetime, message, and buttons are displayed. The framework for that code is seen above. It also involved creating a way for the admins to inspect, edit, and delete comments and set everthing up for future functionality implementation. To do this, I modified the code in the _Comments.cshtml_ file, then created, linked and edited a Blog.css file with the appropriate naming conventions required for project management. 
-
-```css
-
-@model IEnumerable<TheatreCMS3.Areas.Prod.Models.Production>
-
-@{
-    ViewBag.Title = "Index";
-}
-
-
-<!-- Title -->
-<h2 class="Production--header text-left ml-2">Productions</h2>
-
-<!-- Create Button -->
-<div class="text-left ml-2">
-    @Html.ActionLink("Create New", "Create", null, new { @class="btn Production--button mb-3"})
-</div>
-
-<!-- Card box -->
-<div class="container p-1 mb-5">
-
-    <!-- Flex-wrap row with responsive number of columns -->
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-4 row-cols-lg-5 no-gutters mb-5">
-
-        <!-- Iterate Productions table and create a card for each row -->
-	    @foreach (var item in Model)
-	    {
-
-            <!-- Card -->
-			<div>
-		    <div class="card w-auto  mx-1 mb-2 p-0 cms-bg-secondary">
-
-				<div class="Production--cardImage">
-					<!-- Production Image - pending completion of ProductionPhoto class  -->				
-					@*<img src="@Html.DisplayFor(modelItem => item.DefaultPhoto) alt="@Html.DisplayFor(modelItem => item.Title)" />*@
-					<!-- Placeholder Image -->
-					<img src="@Url.Content("~/Content/images/macbeth.png")" class="card-img-top" alt="Default Photo" />
-
-					<!-- Hover overlay with Details, Edit, and Delete link buttons -->
-					<div class="card-img-overlay text-center Production--cardOverlay">
-						<p>
-							@Html.ActionLink("Details", "Details", new { id = item.ProductionID }, new { @class = "badge badge-pill badge-warning" })
-							@Html.ActionLink("Edit", "Edit", new { id = item.ProductionID }, new { @class = "badge badge-pill badge-dark" })
-							@Html.ActionLink("Delete", "Delete", new { id = item.ProductionID }, new { @class = "badge badge-pill badge-danger" })
-						</p>           
-					</div>
-				</div>
-
-                <!-- Production Title -->
-			    <div class="card-title my-0 p-1 Production--cardTitle overflow-auto">
-				    <h5 class="card-title cms-text-dark text-center my-0 ">@Html.DisplayFor(modelItem => item.Title)</h5>
-			    </div>
-
-		    </div>
-			</div>
-	    }
-
-    </div>
-</div>
-```
+The next assignment was to make the comment section look more like a comment section you would find on any popular website. This invovled a redesign of how the author, datetime, message, and buttons were displayed. Some of the framework for that code is seen above. It also involved creating a way for the admins to inspect, edit, and delete comments and set everthing up for future functionality implementation. To do this, I modified the code in the Comments.cshtml file, then created, linked, and edited a Blog.css file with the appropriate naming conventions required for project management. 
 
 ```css
 /* BLOG AREA STYLING */
@@ -449,7 +387,7 @@ comment-index--comment_item {
 Back to: [Assignments](#my-assignments)
 
 ### 5. Implementing Comment Features
-The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax and JSON to create an asynchronously updating property so that the page didn't reload when the buttons were clicked. This was a very tough challenge and involved making changes accross multiple files including but not limited to _Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs_. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons update the respective counts asynchronously without reloading the page when clicked.
+The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax and JSON to create an asynchronously updating property so that the page didn't reload when the buttons were clicked. This was a very tough challenge and involved making changes accross multiple files including but not limited to Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons updated the respective counts asynchronously without reloading the page when clicked.
 
 ```c#
 //...
@@ -526,7 +464,7 @@ function Dislike(id) {
 ```
 
 ```c#
-//_Comments.cshtml</TheatreCMS3.Areas.Blog.Models.Comment>
+//_Comments.cshtml
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -578,9 +516,9 @@ function Dislike(id) {
 Back to: [Assignments](#my-assignments)
 
 ### 6. Create A Like Ratio Progress Bar
-My final story was to create a bootstrap and Ajax progress bar for each Comment that shows a visual representation of the percentage of Likes/Dislikes it currently has. I used the LikeRatio() method to get the percentage to then dynamically fill in the progress bar and used alerts to check for correct returns. I implemented Ajax to update the progrees bar when a Comment is Liked or Disliked without having to reload the browser/web page. This was another fun and challenging story that tested my full range of skills.
+My final story was to create a bootstrap and Ajax progress bar for each Comment that shows a visual representation of the percentage of Likes/Dislikes it currently has. I used the LikeRatio() method to get the percentage to then dynamically fill in the progress bar and used alerts to check for correct returns. I implemented Ajax to update the progress bar when a Comment is Liked or Disliked without having to reload the browser/web page. This was another fun and challenging story that tested my full range of skills.
 
-![Comments Section](/images/)
+![Progress Bar](/images/Story6_ratiobar.gif)
 
 Index.cshtml:
 ```c#
@@ -657,6 +595,7 @@ namespace TheatreCMS3.Areas.Blog.Controllers
         }
 //...
 ```
+
 Comment.cs:
 ```c#
 //Creates a model in the Blog area called Comment | model will represent a user's comment on a blog post
@@ -778,16 +717,24 @@ _Comments.cshtml_:
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="~/Scripts/Areas/Blog.js"></script>
 ```
+
 Back to: [Assignments](#my-assignments)
 
 <hr><hr>
 
 ## _Learning Hightlights_
-* Worked with a team on a development project and learned how to focus on one task at time while maintaining communication with the team and project leaders.
-* Worked with the robust Azure DevOps boards and stories and MVC in Visual Studio.
-* Gained experience with version control branching, merge conflict resolution, and reverting to previous points in my work.
-* Learned to make small, concise commits that were easy for the project manager to handle and understand, and how to review the history of the project.
-* Gained confidence with C#, Git, Razor, Ajax, JSON, jQuery, JavaScript, Bootstrap and .NET.
-* This was so fun to finally put everything I learned into practice and I had a great time doing it.
+
+* Used Agile and Scrum methodoligies and worked within Azure DevOps, utilizing boards, wikis, repos, and stories.
+* Learned how to manage multiple drafts of my work and ask meaningful relevant question during the coding process to ensure quality and correct implementation of project guidlines.
+* Gained experience with Git in Visual Studio, version control branching, console command, merge conflict resolution, and reverting to previous points in my work.
+* Learned to make small, concise commits that were easy for the project manager to handle, and how to review the history of the project and recover code when needed.
+* Worked with a team on a refactored development project and learned how to focus on one task at time while maintaining communication with the team and project managers through daily standups.
+* Improved skills and confidence when working with C#, Git, Razor, Ajax, JSON, jQuery, JavaScript, Bootstrap, IDEs, and .NET.
+* It was so fun to finally put everything I learned into practice and I had a fabulous time doing it.
 
 Back to: [Top](#tta-live-project)
+
+<br /><br />
+<hr>
+Author:
+Viktoriya Furlow - Actual Wizard
