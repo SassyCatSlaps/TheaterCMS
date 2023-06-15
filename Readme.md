@@ -755,5 +755,5 @@ Back to: [Top](#introduction)
 
 <hr>
 <br /><br /><br /><br />
-Author:
+Author: <br />
 Viktoriya Furlow - Actual Wizard
