@@ -35,7 +35,6 @@ Full Stack Stories
 ### 1. Dynamically Display Developer Names
 My first assignment was to use JavaScript/jQuery and bootstrap to count the number developers by name that have worked on this project and display that number next to the title heading.
 
-After:
 ![After](/images/Story1_counter.png)
 
 ```c#
