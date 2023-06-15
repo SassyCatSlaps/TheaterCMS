@@ -18,6 +18,7 @@ Front End Stories
 -----------------
 
 * [Dynamically Display Developer Names](#1-dynamically-display-developer-names)
+* [Style the Comment Section](#4-style-the-comment-section)
 
 Back End Stories
 ----------------
@@ -26,7 +27,6 @@ Back End Stories
 Full Stack Stories
 ------------------
 * [Create and Implement Partial View for Blog Posts](#3-create-and-implement-partial-view-for-blog-posts)
-* [Style the Comment Section](#4-style-the-comment-section)
 * [Implementing Comment Feature Functionality](#5-implementing-comment-feature-functionality)
 * [Create A Like Ratio Progress Bar](#6-create-a-like-ratio-progress-bar)
 
