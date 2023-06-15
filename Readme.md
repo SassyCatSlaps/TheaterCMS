@@ -1,4 +1,4 @@
-# **Theater CMS Project**
+# **Theater CMS Live Project**
 
 ## _Introduction_
 
@@ -9,6 +9,7 @@ This team project was organized into a two-week sprint and was managed with Agil
 
 The majority of my work for this project revolved around creating a Blog area for the website, with user and admin capabilities. I was assigned some of the harder stories for this project and am very proud of what I was able to learn and accomplish.
 
+<br />
 <hr>
 
 ## _My Assignments_
@@ -16,18 +17,18 @@ The majority of my work for this project revolved around creating a Blog area fo
 Front End Stories
 -----------------
 
-* [Count and Display the Number of Developers](#1-count-and-display-devs)
+* [Dynamically Display Developer Names](#1-dynamically-display-developer-names)
 
 Back End Stories
 ----------------
-* [Create Comment Model and CRUD Pages](#2-create-comment-model-and-crud)
+* [Create Comment Model and CRUD Pages](#2-create-comment-model-and-crud-pages)
 
 Full Stack Stories
 ------------------
-* [Create and Implement Partial View for BlogPosts](#3-create-partial-view)
-* [Style Comments Section of Blog](#4-style-comments-section)
-* [Implementing Comment Feature Functionality](#5-like-dislike-implementation)
-* [Comment Feature Ratio Bar](#6-ratio-bar-for-likes-and-dislikes)
+* [Create and Implement Partial View for Blog Posts](#3-create-and-implement-partial-view-for-blog-posts)
+* [Style the Comment Section](#4-style-the-comment-section)
+* [Implementing Comment Feature Functionality](#5-implementing-comment-feature-functionality)
+* [Create A Like Ratio Progress Bar](#6-create-a-like-ratio-progress-bar)
 
 
 <hr><hr>
@@ -55,7 +56,7 @@ $(document).ready(function () {
 ```
 Back to: [Assignments](#my-assignments)
 
-### 2. Create Comment Model and CRUD for Blog Area
+### 2. Create Comment Model and CRUD Pages
 Next, I was tasked with creating a model for the Blog and creating the database table for it through Entity Framework. This model represented a user's comment on a blog post. It involved creating a class and associated properties to match the dB schema, context file implementation for table creation, and creating a new controller with scaffolding for CRUD pages for table management. By referencing a UML class diagram, I was able to create a Comment constructor with the current date/time, the comment author, their message, and likes and dislikes for the comment. After I created the model I scaffolded the CRUD pages using Visual Studio and EntityFramework to create the Index, Edit, Create, Details, and Delete pages for the admins and users.
 
 ![UML Diagram](/images/Story2_UML-class-diagram.png)
@@ -214,9 +215,10 @@ namespace TheatreCMS3.Areas.Blog.Controllers
 
 Back to: [Assignments](#my-assignments)
 
-### 3. Create a Partial View for Displaying Comments
+### 3. Create and Implement Partial View for Blog Posts
 Following creation of the comment model and CRUD pages, I was assigned to create a partial view for displaying comments accross other pages so that they weren't only regulated to being displayed on the Comments Index page. I did this by replacing the table on the comments Index page with a method that calls the Comments.cshtml partial view.
-
+<br />
+Before:
 ```c#
 //Index.cshtml
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
@@ -328,7 +330,7 @@ After:
 ```
 Back to: [Assignments](#my-assignments)
 
-### 4. Style the Comments Section
+### 4. Style the Comment Section
 The next assignment was to make the comment section look more like a comment section you would find on any popular website. This invovled a redesign of how the author, datetime, message, and buttons were displayed. Some of the framework for that code is seen above. It also involved creating a way for the admins to inspect, edit, and delete comments and set everthing up for future functionality implementation. To do this, I modified the code in the Comments.cshtml file, then created, linked, and edited a Blog.css file with the appropriate naming conventions required for project management. 
 
 ```css
@@ -385,7 +387,7 @@ comment-index--comment_item {
 
 Back to: [Assignments](#my-assignments)
 
-### 5. Implementing Comment Features
+### 5. Implementing Comment Feature Functionality
 The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax and JSON to create an asynchronously updating property so that the page didn't reload when the buttons were clicked. This was a very tough challenge and involved making changes accross multiple files including but not limited to Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons updated the respective counts asynchronously without reloading the page when clicked.
 
 ```c#
