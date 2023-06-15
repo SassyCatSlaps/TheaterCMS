@@ -55,10 +55,13 @@ $(document).ready(function () {
 });
 ```
 Back to: [Assignments](#my-assignments)
+<br />
 
 ### 2. Create Comment Model and CRUD Pages
 Next, I was tasked with creating a model for the Blog and creating the database table for it through Entity Framework. This model represented a user's comment on a blog post. It involved creating a class and associated properties to match the dB schema, context file implementation for table creation, and creating a new controller with scaffolding for CRUD pages for table management. By referencing a UML class diagram, I was able to create a Comment constructor with the current date/time, the comment author, their message, and likes and dislikes for the comment. After I created the model I scaffolded the CRUD pages using Visual Studio and EntityFramework to create the Index, Edit, Create, Details, and Delete pages for the admins and users.
+<br />
 
+UML Class Diagram: <br />
 ![UML Diagram](/images/Story2_UML-class-diagram.png)
 
 Comment Model:
@@ -210,10 +213,11 @@ namespace TheatreCMS3.Areas.Blog.Controllers
     }
 }
 ```
-
+Scaffolding: <br />
 ![Scaffolding](/images/Story2_Scaffolding.png)
 
 Back to: [Assignments](#my-assignments)
+<br />
 
 ### 3. Create and Implement Partial View for Blog Posts
 Following creation of the comment model and CRUD pages, I was assigned to create a partial view for displaying comments accross other pages so that they weren't only regulated to being displayed on the Comments Index page. I did this by replacing the table on the comments Index page with a method that calls the Comments.cshtml partial view.
@@ -329,6 +333,7 @@ After:
 </div>
 ```
 Back to: [Assignments](#my-assignments)
+<br />
 
 ### 4. Style the Comment Section
 The next assignment was to make the comment section look more like a comment section you would find on any popular website. This invovled a redesign of how the author, datetime, message, and buttons were displayed. Some of the framework for that code is seen above. It also involved creating a way for the admins to inspect, edit, and delete comments and set everthing up for future functionality implementation. To do this, I modified the code in the Comments.cshtml file, then created, linked, and edited a Blog.css file with the appropriate naming conventions required for project management. 
@@ -386,6 +391,7 @@ comment-index--comment_item {
 ```
 
 Back to: [Assignments](#my-assignments)
+<br />
 
 ### 5. Implementing Comment Feature Functionality
 The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax and JSON to create an asynchronously updating property so that the page didn't reload when the buttons were clicked. This was a very tough challenge and involved making changes accross multiple files including but not limited to Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons updated the respective counts asynchronously without reloading the page when clicked.
@@ -515,6 +521,7 @@ function Dislike(id) {
 <script src="~/Scripts/Areas/Blog.js"></script>
 ```
 Back to: [Assignments](#my-assignments)
+<br />
 
 ### 6. Create A Like Ratio Progress Bar
 My final story was to create a bootstrap and Ajax progress bar for each Comment that shows a visual representation of the percentage of Likes/Dislikes it currently has. I used the LikeRatio() method to get the percentage to then dynamically fill in the progress bar and used alerts to check for correct returns. I implemented Ajax to update the progress bar when a Comment is Liked or Disliked without having to reload the browser/web page. This was another fun and challenging story that tested my full range of skills.
@@ -735,8 +742,7 @@ Back to: [Assignments](#my-assignments)
 
 Back to: [Top](#tta-live-project)
 
-<br /><br />
 <hr>
-<br /><br />
+<br /><br /><br /><br />
 Author:
 Viktoriya Furlow - Actual Wizard
