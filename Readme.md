@@ -1,7 +1,13 @@
-# **Theater CMS Live Project**
+<div align="center">
 
+# **Theater CMS Live Project**
+     
 ## _Introduction_
 
+<br />
+    
+</div>
+    
 I participated in a Live Project with a team of peers for the final two weeks of my C# and .NET course at The Tech Academy.
 The project was for a company in Portland called Theatre Vertigo. It involved creating and building an interactive website for managing and productions using a Code-first approach with Entity Framework and .NET MVC.
 
@@ -12,31 +18,36 @@ The majority of my work for this project revolved around creating a Blog area fo
 <br />
 <hr>
 
-## _My Assignments_
+<div align="center">
 
+# _My Assignments_
+    
 Front End Stories
 -----------------
 
-* [Dynamically Display Developer Names](#1-dynamically-display-developer-names)
-* [Style the Comment Section](#4-style-the-comment-section)
+ [Dynamically Display Developer Names](#1-dynamically-display-developer-names) <br />
+ [Style the Comment Section](#4-style-the-comment-section)
 
 Back End Stories
 ----------------
-* [Create Comment Model and CRUD Pages](#2-create-comment-model-and-crud-pages)
+ [Create Comment Model and CRUD Pages](#2-create-comment-model-and-crud-pages)
 
 Full Stack Stories
 ------------------
-* [Create and Implement Partial View for Blog Posts](#3-create-and-implement-partial-view-for-blog-posts)
-* [Implementing Comment Feature Functionality](#5-implementing-comment-feature-functionality)
-* [Create A Like Ratio Progress Bar](#6-create-a-like-ratio-progress-bar)
+ [Create and Implement Partial View for Blog Posts](#3-create-and-implement-partial-view-for-blog-posts) <br />
+ [Implementing Comment Feature Functionality](#5-implementing-comment-feature-functionality) <br />
+ [Create A Like Ratio Progress Bar](#6-create-a-like-ratio-progress-bar)
 
-
-<hr><hr>
+</div>
+<hr>
 <br />
-### 1. Dynamically Display Developer Names
-My first assignment was to use JavaScript/jQuery and bootstrap to count the number developers by name that have worked on this project and display that number next to the title heading.
 
-![After](/images/Story1_counter.png)
+### 1. Dynamically Display Developer Names
+
+My first assignment was to use JavaScript/jQuery and bootstrap to count the number developers by name that have worked on this project and display that number next to the title heading.
+<br /><br />
+
+![Counter](/images/Story1_counter.png)
 
 ```c#
 /* SIGN-IN PAGE */
@@ -242,7 +253,6 @@ Before:
 
     @Html.Partial("~/Areas/Blog/Views/Comments/_Comments.cshtml", Model*@)
 
-Before:
 //_Comments.cshtml
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
 
@@ -665,7 +675,7 @@ function updateProgressBars() {
 // Calls the updateProgressBars function initially
 updateProgressBars();
 ```
-_Comments.cshtml_:
+Comments.cshtml:
 ```c#
 @model IEnumerable<TheatreCMS3.Areas.Blog.Models.Comment>
 
@@ -740,7 +750,7 @@ Back to: [Assignments](#my-assignments)
 * Improved skills and confidence when working with C#, Git, Razor, Ajax, JSON, jQuery, JavaScript, Bootstrap, IDEs, and .NET.
 * It was so fun to finally put everything I learned into practice and I had a fabulous time doing it.
 
-Back to: [Top](#tta-live-project)
+Back to: [Top](#introduction)
 
 <hr>
 <br /><br /><br /><br />
