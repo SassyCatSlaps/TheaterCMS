@@ -740,6 +740,7 @@ Back to: [Assignments](#my-assignments)
 <br />
 <hr><hr>
 <br />
+
 ## _Learning Hightlights_
 
 * Used Agile and Scrum methodoligies and worked within Azure DevOps, utilizing boards, wikis, repos, and stories.
