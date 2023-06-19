@@ -362,6 +362,9 @@ Back to: [Assignments](#my-assignments)
 
 ### 4. Style the Comment Section
 The next assignment was to make the comment section look more like a comment section you would find on any popular website. This invovled a redesign of how the author, datetime, message, and buttons were displayed. Some of the framework for that code is seen above. It also involved creating a way for the admins to inspect, edit, and delete comments and set everthing up for future functionality implementation. To do this, I modified the code in the Comments.cshtml file, then created, linked, and edited a Blog.css file with the appropriate naming conventions required for project management. 
+<br />
+
+![Styling](/images/BlogCommentSection.png)
 
 ```css
 /* BLOG AREA STYLING */
@@ -753,12 +756,15 @@ Comments.cshtml:
 
 Back to: [Assignments](#my-assignments)
 <br />
-<hr><hr>
+<hr>
 <br />
 
 Back to: [Top](#introduction)
 
-<hr>
-<br /><br /><br /><br />
-Author: <br />
+<br />
+<hr><hr>
+<br /><br /><br />
+
+### Author: 
+
 Viktoriya Furlow - Actual Wizard
