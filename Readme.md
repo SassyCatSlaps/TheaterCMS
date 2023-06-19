@@ -552,7 +552,7 @@ Back to: [Assignments](#my-assignments)
 <br /><br />
 
 ### 6. Create A Like Ratio Progress Bar
-My final story was to create a bootstrap and Ajax progress bar for each Comment that shows a visual representation of the percentage of Likes/Dislikes it currently has. I used the LikeRatio() method to get the percentage to then dynamically fill in the progress bar and used alerts to check for correct returns. I implemented Ajax to update the progress bar when a Comment is Liked or Disliked without having to reload the browser/web page. This was another fun and challenging story that tested my full range of skills.
+My final story was to create a bootstrap and Ajax progress bar for each Comment that shows a visual representation of the percentage of Likes/Dislikes it currently has. I used the LikeRatio() method to get the percentage to then dynamically fill in the progress bar and used alerts to check for correct returns. I implemented Ajax to update the progress bar when a Comment is Liked or Disliked without having to reload the browser/web page. This was another fun and challenging story that allowed me to utilize my full range of skills.
 
 ![Progress Bar](/images/Story6_ratiobar.gif)
 
