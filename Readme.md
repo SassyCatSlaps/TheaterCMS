@@ -6,7 +6,7 @@
 
 <br />
     
-</div>
+
     
 I participated in a Live Project with a team of peers for the final two weeks of my C# and .NET course at The Tech Academy.
 The project was for a company in Portland called Theatre Vertigo. It involved creating and building an interactive website for managing and productions using a Code-first approach with Entity Framework and .NET MVC.
@@ -16,6 +16,21 @@ This team project was organized into a two-week sprint and was managed with Agil
 The majority of my work for this project revolved around creating a Blog area for the website, with user and admin capabilities. I am very proud of what I was able to learn and accomplish during this 2 week sprint.
 
 <br />
+<hr>
+
+## _Learning Hightlights_
+     
+</div>
+
+* Worked with a team on a refactored development project and learned how to focus on one task at time while maintaining communication with project managers and team through daily standups.
+* Used Agile and Scrum methodoligies and worked within Azure DevOps, utilizing boards, wikis, repos, and stories.
+* Learned how to manage multiple drafts of my work and ask meaningful, relevant questions during the coding process to ensure quality and correct implementation of project guidlines.
+* Gained experience with Git in Visual Studio, version control branching, console command, merge conflict resolution, and reverting to previous points in my work.
+* Learned to make small, concise commits that were easy for the project manager to handle, and how to review the history of the project and recover code when needed.
+* Improved skills and confidence when working with C#, Git, Razor, Ajax, JSON, jQuery, JavaScript, Bootstrap, IDEs, and .NET.
+* It was so fun to finally put everything I learned into practice and I had a fabulous time doing it.
+
+     
 <hr>
 
 <div align="center">
@@ -404,7 +419,7 @@ Back to: [Assignments](#my-assignments)
 <br /><br />
 
 ### 5. Implementing Comment Feature Functionality
-The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax and JSON to create an asynchronously updating property so that the page didn't reload when the buttons were clicked. This was a very tough challenge and involved making changes accross multiple files including but not limited to Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons updated the respective counts asynchronously without reloading the page when clicked.
+The next task was to implement the Upvote/Downvote functionality by incrementing the Like and Dislike properties by 1 when a user clicks the corresponding buttons. I had to teach myself Ajax model methods and JSON formatting to create an asynchronously updating property to ensure the page didn't reload while refreshing information when buttons were clicked. This was a tough challenge and involved making changes accross multiple files including but not limited to Comments.cshtml, Blog.js, Index.cshtml, and CommentsController.cs. I attached event handlers to the button classes that were used to make Ajax requests to the server and implemented exceptions to handle any errors that might occur during calls. With my code completed, the like and dislike buttons updated the respective counts asynchronously without reloading the page when clicked.
 
 ```c#
 //...
@@ -740,16 +755,6 @@ Back to: [Assignments](#my-assignments)
 <br />
 <hr><hr>
 <br />
-
-## _Learning Hightlights_
-
-* Used Agile and Scrum methodoligies and worked within Azure DevOps, utilizing boards, wikis, repos, and stories.
-* Learned how to manage multiple drafts of my work and ask meaningful relevant question during the coding process to ensure quality and correct implementation of project guidlines.
-* Gained experience with Git in Visual Studio, version control branching, console command, merge conflict resolution, and reverting to previous points in my work.
-* Learned to make small, concise commits that were easy for the project manager to handle, and how to review the history of the project and recover code when needed.
-* Worked with a team on a refactored development project and learned how to focus on one task at time while maintaining communication with the team and project managers through daily standups.
-* Improved skills and confidence when working with C#, Git, Razor, Ajax, JSON, jQuery, JavaScript, Bootstrap, IDEs, and .NET.
-* It was so fun to finally put everything I learned into practice and I had a fabulous time doing it.
 
 Back to: [Top](#introduction)
 
